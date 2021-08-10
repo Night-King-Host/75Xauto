@@ -1,26 +1,53 @@
 <html manifest="NK75XAUTO.manifest">
-	<style>
+<style>
+ .modal-content {
+  font-family: BFARNAZ;
+  font-size: 18px;
+  position: relative;
+  background-color: #dddddd;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+/* Modal Content */
+.modal-content {
+  font-family: BFARNAZ;
+  font-size: 18px;
+  position: relative;
+  background-color: #dddddd;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
 		.button {
-				  background-color: white;  
-				  border-radius: 5px;
-				  border: 2px solid black;
-				  color: #4863A0;
-				  padding: .5em;
-				  text-decoration: none;
-				  display:inline-table;
-				  font-family: system-ui;
-				  font-size: 20px;
-				  text-align: center;
-				  width: 170px;
-                  height: 40px; 
-				}
-				.button:focus,
-				.button:hover {
-				  box-shadow: 0 5px 50px 0 white;
-				  color: #4863A0;
-				  border-radius: 10px;
-				  cursor: pointer;
-				  }
+		  background-color: white; 
+		  color: #4863A0;
+		  border-radius: 5px;
+		  padding: .5em;
+		  text-decoration: none;
+		  width: 170px;
+          height: 30px;
+		  display:inline-table;
+		  font-family: system-ui;
+		}
+
+		.button:focus,
+		.button:hover {
+			box-shadow: 0 5px 50px 0 white;
+            color: #4863A0;
+            border-radius: 10px;}
 			
 				  .temp {
 				  background-color: white;  
@@ -118,7 +145,7 @@
 				.pointer {cursor: pointer;}
 			</style>
 	<head>
-	<title>Night King 7.5X FW Auto Jailbreak Full</title>
+	<title>Night King 7.5X FW Auto Jailbreak Full V1.2</title>
 	</head>
 	<body onload="go()" class="bg">
 		<script>
@@ -162,14 +189,21 @@
 		
 function done(){
 			document.getElementById("myProgress").remove();
-            document.getElementById('load').innerHTML='<tr id="mexp">'+
-				'<td align="center" colspan="3">'+
+            document.getElementById('jbmenu').innerHTML='<tr>'+
+				    '<td align="center" colspan="6">'+
 					'<div style=font-size:20px;text-align:center;color:yellow;>7.5X FW SLEIRSGOEVY KERNEL EXPLOIT VERSIONS</div>'+
-					'<a href="#" id="june03jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy June 03rd, 2021 (Imitate legit network traffic before exploit)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host\'" onclick="toggle_payload(\'june03jb\'); return false">June 03 JB</a>&nbsp;'+
-					'<a href="#" id="may27jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy May 27th, 2021 (Add source Unix sockets to the fixup list )\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host\'" onclick="toggle_payload(\'may27jb\'); return false">May 27 JB</a>&nbsp;'+
-					'<a href="#" id="may20jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy May 20th, 2021 (Retry the exploit on known-recoverable failures)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host\'" onclick="toggle_payload(\'may20jb\'); return false">May 20 JB</a>&nbsp;'+
-					'<a href="#" id="april28jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy April 28, 2021 (Reduce sleeps in jb.c to speed up JB)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host\'" onclick="toggle_payload(\'april28jb\'); return false">April 28 JB</a>&nbsp;'+
-					'<a href="#" id="march17jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy March 17, 2021 (Initial JB)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host\'" onclick="toggle_payload(\'march17jb\'); return false">March 17 JB</a>&nbsp;'+
+					'<br/><a href="#" id="july20jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy July 20th, 2021 (Add post-exploit cleanup spray)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'july20jb\'); return false">July 20-2021</a>&nbsp;'+
+					'</td>'+
+			        '</tr>'+
+			        '<br/><br/>'+
+			        '<tr>'+
+			        '<td align="center" colspan="6">'+
+					'<a href="#" id="june03jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy June 03rd, 2021 (Imitate legit network traffic before exploit)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'june03jb\'); return false">June 03-2021</a>&nbsp;'+
+					'<a href="#" id="may27jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy May 27th, 2021 (Add source Unix sockets to the fixup list )\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'may27jb\'); return false">May 27-2021</a>&nbsp;'+
+					'<a href="#" id="may20jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy May 20th, 2021 (Retry the exploit on known-recoverable failures)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'may20jb\'); return false">May 20-2021</a>&nbsp;'+
+					'<a href="#" id="may02jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy May 02th, 2021 (Make delays slightly larger)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'may02jb\'); return false">May 02-2021</a>&nbsp;'+
+					'<a href="#" id="april28jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy April 28, 2021 (Reduce sleeps in jb.c to speed up JB)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'april28jb\'); return false">April 28-2021</a>&nbsp;'+
+					'<a href="#" id="march17jb" class="button pointer" onMouseOver="progress.innerHTML=\'Sleirsgoevy March 17, 2021 (Initial JB)\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'march17jb\'); return false">March 17-2021</a>&nbsp;'+
 					'</td></tr>'+
 					'<tr><td><br/></td></tr>'+
 					'<tr>';
@@ -221,7 +255,7 @@ function done(){
 		  <div id="myBar">0%</div>
 		</h1>
 
-		<table id="load" align="center" style="width:1300px;margin-top:180px;">
+		<table id="jbmenu" align="center" style="width:1300px;margin-top:180px;">
 		</table>
         <table id="menu" align="center" style="width:1300px;margin-top:20px;">
 		</table>

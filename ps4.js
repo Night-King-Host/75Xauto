@@ -35,7 +35,6 @@ var g_message_heading_leak = null;
 var g_message_body_leak = null;
 
 var g_textarea_div_elem = null;
-
 var g_obj_str = {};
 
 var g_rows1 = '1px,'.repeat(LENGTH_VALIDATION_MESSAGE / 8 - 2) + "1px";
@@ -116,7 +115,8 @@ function setupRW() {
 	g_jsview_butterfly = new Int64(bf);
 	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
 		die("[!] Failed to setup addrof/fakeobj primitives");
-	debug_log("->Exploit Complete..Run Jailbreak !!");
+
+		debug_log("-> WebKit Exploit Complete.. Run the Kernel Exploit to Jailbreak !!");
 
 	/* Getting code execution */
 	/* ... */
@@ -125,133 +125,151 @@ function setupRW() {
 
 }
 
+function load_trainer(){
+	var link = document.createElement('a');
+		  document.body.appendChild(link);
+		  link.href = 'http://night-king.rf.gd/index.html';
+		  link.click();
+		  }
+
 function toggle_payload(pld){
-	if(pld == "march17jb"){
-		document.getElementById("progress").innerHTML="Running March 17,2021 Jailbreak.. Please wait!!";
-		preloadScripts(['jb_march17.js']);
-	}else if(pld == "april28jb"){
-		document.getElementById("progress").innerHTML="Running April 28,2021 Jailbreak.. Please wait!!";
-		preloadScripts(['jb_april28.js']);
-	}else if(pld == "may20jb"){
-		document.getElementById("progress").innerHTML="Running May 20,2021 Jailbreak.. Please wait!!";
-		preloadScripts(['jb_may20.js']);
-	}else if(pld == "may27jb"){
-		document.getElementById("progress").innerHTML="Running May 27,2021 Jailbreak.. Please wait!!";
-		preloadScripts(['jb_may27.js']);
-	}else if(pld == "june03jb"){
-		document.getElementById("progress").innerHTML="Running June 03,2021 Jailbreak.. Please wait!!";
-		preloadScripts(['jb_june03.js']);
+	if(pld == "july20jb"){
+		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
+		preloadScripts(['jb_july20.js']);}
+	else if(pld == "june03jb"){
+		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
+		preloadScripts(['jb_june03.js']);}
+	else if(pld == "may27jb"){
+		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
+		preloadScripts(['jb_may27.js']);}
+	else if(pld == "may20jb"){
+		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
+		preloadScripts(['jb_may20.js']);}
+	else if(pld == "may02jb"){
+	   document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
+	   preloadScripts(['jb_may02.js']);}
+	else if(pld == "april28jb"){
+		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
+		preloadScripts(['jb_april28.js']);}
+	else if(pld == "march17jb"){
+		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
+	    preloadScripts(['jb_march17.js']);
 	}else if(pld == "binloader"){
-		document.getElementById("progress").innerHTML="Awaiting Payload.. Send Payload to port 9021..";
+		document.getElementById("progress").innerHTML="Awaiting Payload.. Send Payload to port 9020..";
 		preloadScripts(['preloader.js', 'loader.js']);
 	}else if(pld == "mira75X"){
 		document.getElementById("progress").innerHTML="Loading MIRA.. Please wait..";
 		if(fw=="755"){
 			preloadScripts(['preloader.js', 'mira_755.js', 'loader.js']);
 		}else{
-			preloadScripts(['preloader_'+fw+'.js', 'mira_'+fw+'.js', 'loader.js']);	
+			preloadScripts(['preloader_'+fw+'.js', 'mira_'+fw+'.js', 'loader_'+fw+'.js']);	
 		}
-	}else if(pld == "mirab"){
-		document.getElementById("progress").innerHTML="Loading Mira2B.. Please wait..";
+	}else if(pld == "mira2b"){
+		document.getElementById("progress").innerHTML="Loading MIRA + SPOOF.. Please wait..";
 		preloadScripts(['preloader.js', 'mira2b.js', 'loader.js']);
-	}else if(pld == "goldhen11"){
-		document.getElementById("progress").innerHTML="Loading GoldHEN V1.1.. Please wait..";
-		if(fw=="755"){
-			preloadScripts(['preloader.js', 'goldhen11_755.js', 'loader.js']);
-		}else{
-			preloadScripts(['preloader_'+fw+'.js', 'goldhen11_'+fw+'.js', 'loader.js']);	
-		}
-	}else if(pld == "goldhen11b7"){
-		document.getElementById("progress").innerHTML="Loading GoldHEN V1.1b7.. Please wait..";
-		if(fw=="755"){
-			preloadScripts(['preloader.js', 'goldhen11b7_755.js', 'loader.js']);
-		}else{
-			preloadScripts(['preloader_'+fw+'.js', 'goldhen11b7_'+fw+'.js', 'loader.js']);	
-		}
-	}else if(pld == "goldhen10"){
-		document.getElementById("progress").innerHTML="Loading GoldHEN V1.0.. Please wait..";
-		if(fw=="755"){
-			preloadScripts(['preloader.js', 'goldhen10_755.js', 'loader.js']);
-		}else{
-			preloadScripts(['preloader_'+fw+'.js', 'goldhen10_'+fw+'.js', 'loader.js']);	
-		}
 	}else if(pld == "ftp"){
 		setTimeout(function(){document.getElementById("progress").innerHTML="FTP Loaded.. Access at port 1337.."; }, 7000);
 		preloadScripts(['preloader.js', 'ftp.js', 'loader.js']);
 	}else if(pld == "app2usb"){
-		document.getElementById("progress").innerHTML="Loading App-2-USB.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'app2usb.js', 'loader.js']);
-	}else if(pld == "orbistoolbox"){
-		document.getElementById("progress").innerHTML="Loading Orbis-ToolBox.. Please wait..";
-		preloadScripts(['preloader.js', 'orbistoolbox.js', 'loader.js']);
-	}else if(pld == "webrte"){
-		document.getElementById("progress").innerHTML="Loading WebRTE.. Please wait..";
-		preloadScripts(['preloader.js', 'webrte.js', 'loader.js']);
 	}else if(pld == "disableupdates"){
-		document.getElementById("progress").innerHTML="Loading Disable-Updates.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'disableupdates.js', 'loader.js']);
 	}else if(pld == "enableupdates"){
-		document.getElementById("progress").innerHTML="Loading Enable Updates.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'enableupdates.js', 'loader.js']);
 	}else if(pld == "backup"){
-		document.getElementById("progress").innerHTML="Loading Back-Up Database.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'backup.js', 'loader.js']);
 	}else if(pld == "restore"){
-		document.getElementById("progress").innerHTML="Loading Restore Database.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'restore.js', 'loader.js']);
 	}else if(pld == "rifrenamer"){
-		document.getElementById("progress").innerHTML="Loading Rif-Renamer.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'rifrenamer.js', 'loader.js']);
 	}else if(pld == "todex"){
-		document.getElementById("progress").innerHTML="Loading To-DEX.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'todex.js', 'loader.js']);
 	}else if(pld == "dumper"){
-		document.getElementById("progress").innerHTML="Loading Games Dumper.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'dumper.js', 'loader.js']);
 	}else if(pld == "disableaslr"){
-		document.getElementById("progress").innerHTML="Loading Disable-ASLR.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'disableaslr.js', 'loader.js']);
 	}else if(pld == "kerneldumper"){
-		document.getElementById("progress").innerHTML="Loading Kernel Dumper.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'kerneldumper.js', 'loader.js']);
 	}else if(pld == "kernelclock"){
-		document.getElementById("progress").innerHTML="Loading Kernel Clock.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'kernelclock.js', 'loader.js']);
 	}else if(pld == "enablebrowser"){
-		document.getElementById("progress").innerHTML="Loading Enable Browser.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'enablebrowser.js', 'loader.js']);
-	}else if(pld == "linux1gb"){
-		document.getElementById("progress").innerHTML="Loading Linux Loader 1GB.. Please wait..";
-		preloadScripts(['preloader.js', 'linux1gb.js', 'loader.js']);
-	}else if(pld == "linux3gb"){
-		document.getElementById("progress").innerHTML="Loading Linux Loader 3GB.. Please wait..";
-		preloadScripts(['preloader.js', 'linux3gb.js', 'loader.js']);
-	}else if(pld == "module"){
-		document.getElementById("progress").innerHTML="Loading Kernel Module Dumper.. Please wait..";
-		preloadScripts(['preloader.js', 'mdumper.js', 'loader.js']);
 	}else if(pld == "historyblocker"){
-		document.getElementById("progress").innerHTML="Loading History Blocker.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'historyblocker.js', 'loader.js']);
+	}else if(pld == "exitidu"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['preloader.js', 'exitidu.js', 'loader.js']);
 	}else if(pld == "ps4debug"){
-		document.getElementById("progress").innerHTML="Loading PS4DEBUG.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['preloader.js', 'ps4debug.js', 'loader.js']);
-	}
-	else if(pld == "webactivator"){
-		document.getElementById("progress").innerHTML="Loading Account Offline Web Activator.. Please wait..";
-		preloadScripts(['preloader.js', 'payload.js', 'loader.js', 'frontend.js']);
-	}
+	}else if(pld == "goldhen11"){
+		document.getElementById("progress").innerHTML="Loading GoldHen V1.1 .. Please wait..";
+		if(fw=="755"){
+			preloadScripts(['preloader.js', 'goldhen11_755.js', 'loader.js']);
+		}else{
+			preloadScripts(['preloader.js', 'goldhen11_'+fw+'.js', 'loader.js']);	
+		}
+	}else if(pld == "goldhen11b7"){
+		document.getElementById("progress").innerHTML="Loading GoldHen V1.1 Beta7.. Please wait..";
+		if(fw=="755"){
+			preloadScripts(['preloader.js', 'goldhen11b7_755.js', 'loader.js']);
+		}else{
+			preloadScripts(['preloader.js', 'goldhen11b7_'+fw+'.js', 'loader.js']);	
+		}
+	}else if(pld == "goldhen10"){
+		document.getElementById("progress").innerHTML="Loading GoldHen V1.0.. Please wait..";
+		preloadScripts(['preloader.js', 'goldhen10.js', 'loader.js']);
+	}else if(pld == "webrte"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['preloader.js', 'webrte.js', 'loader.js']);
+	}else if(pld == "orbistoolbox"){
+	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['preloader.js', 'orbistoolbox.js', 'loader.js']);
+    }else if(pld == "webactivator"){
+	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['preloader.js', 'payload.js', 'loader.js', 'frontend.js']);
+	}else if(pld == "fan50"){
+	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['preloader.js', 'fan50.js', 'loader.js']);	
+	}else if(pld == "fan55"){
+	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['preloader.js', 'fan55.js', 'loader.js']);	
+	}else if(pld == "fan60"){
+    document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['preloader.js', 'fan60.js', 'loader.js']);	
+	}else if(pld == "fan65"){
+    document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+    preloadScripts(['preloader.js', 'fan65.js', 'loader.js']);	
+    }else if(pld == "fan70"){
+	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['preloader.js', 'fan70.js', 'loader.js']);	
+    }
+			
 	if(window.postPayload)
 		window.postPayload();
 	payload_finished(pld);
 	
-}
+    }
 
 function payload_finished(payload)
 {
 	if(payload == "binloader"){
 		setTimeout(function(){document.getElementById("progress").innerHTML="Awaiting Payload!! Send Payload To Port 9021"; }, 7000);
-	} else if(payload != "march17jb" && payload != "april28jb" && payload != "may20jb" && payload != "may27jb" && payload != "june03jb"){
-		setTimeout(function(){document.getElementById("progress").innerHTML="Payload Loaded Succesfully !!"; }, 7000);
+	} else if(payload != "july20jb" && payload != "june03jb" && payload != "may27jb" && payload != "may20jb" && payload != "may02jb" && payload != "april28jb"  && payload != "march17jb"){
+		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.55 Payload Loaded Succesfully !!"; }, 7000);
 	}
 }
 
@@ -441,7 +459,7 @@ function confuseTargetObjRound1() {
 	 * The timeout must be > 5s because deleteBubbleTree is scheduled to run in
 	 * the next 5s
 	 */
-	setTimeout(function(){leakJSC();}, 6000);
+	setTimeout(leakJSC, 6000);
 }
 
 function handle2() {
@@ -573,7 +591,7 @@ function sprayStringImpl(start, end) {
 }
 
 function go() {
-		if(localStorage.is75XACached){
+	if(localStorage.is75XACached){
 		/* Init spray */
 		sprayHTMLTextArea();
 
