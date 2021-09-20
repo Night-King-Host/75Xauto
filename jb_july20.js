@@ -142991,7 +142991,6 @@ if(main_ret == 179 || main_ret == 0){
     '<a href="#" id="mira75X" class="button pointer" onMouseOver="progress.innerHTML=\'Mira by Al-Azif\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'mira75X\'); return false">Mira 75X</a>&nbsp;'+
     '<a href="#" id="mirab" class="button pointer" onMouseOver="progress.innerHTML=\'Mira2b Spoof to 9.99\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'mirab\'); return false">Mira2b</a>&nbsp;'+
     '<a href="#" id="goldhen10" class="button pointer" onMouseOver="progress.innerHTML=\'GoldHen v1.0 By SiSTRo\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'goldhen10\'); return false" style="background-color: goldenrod;color: white">GoldHen V1.0</a>&nbsp;'+
-    '<a href="#" id="goldhen11b7" class="button pointer" onMouseOver="progress.innerHTML=\'GoldHen v1.1 Beta 7 by SiSTRo\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'goldhen11b7\'); return false" style="background-color: goldenrod;color: white">GoldHen V1.1B7</a>&nbsp;'+
     '<a href="#" id="goldhen11" class="button pointer" onMouseOver="progress.innerHTML=\'GoldHen v1.1 by SiSTRo\'"; onmouseout="progress.innerHTML=\'Night King 7.5X FW Exploit Host V1.2\'" onclick="toggle_payload(\'goldhen11\'); return false" style="background-color: goldenrod;color: white">GoldHen V1.1</a>&nbsp;'+
     '</td>'+
     '</tr>'+
